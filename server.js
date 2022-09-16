@@ -25,13 +25,11 @@ const watches = {
         'foundedYear': 0,
         'founderName': 'unknown', 
         'foundedLocation': 'unknown'  
-
     },
     'casio':{
         'foundedYear': 1946,
         'founderName': 'Tadao Kashio', 
         'foundedLocation': 'Tokio, Japan'  
-
     }
 
 }
