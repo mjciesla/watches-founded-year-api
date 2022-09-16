@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
+const cors = require(cors)
 const PORT = 8000
+
+app.use(cors())
 
 const watches = {
     'rolex':{
@@ -12,6 +15,11 @@ const watches = {
         'foundedYear': 1839,
         'founderName': 'Antoni Patek,  Adrien Philippe', 
         'foundedLocation': 'Geneve, Switzerland'  
+    },
+    'jaeger lecoutre':{
+        'foundedYear': 1833,
+        'founderName': 'Antoine LeCoultre', 
+        'foundedLocation': 'Le Sentier, Switzerland'  
     },
     'unknown':{
         'foundedYear': 0,
@@ -36,6 +44,6 @@ app.get('/api/:brand', (req, res)=>{
     }
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT||PORT, () => {
     console.log(`The server is now running on port ${PORT}!`)
 })
